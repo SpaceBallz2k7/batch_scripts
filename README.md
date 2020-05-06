@@ -1,5 +1,5 @@
 # batch_scripts
-My Batch File Collection. Mainly for converting media files to HEVC with FFMpeg.
+My Batch File Collection. Mainly for converting media files using NVIDIA HEVC with FFMpeg.
 
 Usage - no_spaces.bat
 
