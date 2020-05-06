@@ -14,6 +14,7 @@ If you have filenames with spaces in them use my no_spaces.bat script first
 1. Place all_files.bat along with ffmpeg.exe (built with nvenc enabled) into a folder
 2. Run all_files.bat This will recursively scan folders for mp4, mkv & avi files
 3. If any files are found it will look for the following :-
+
     Files with group names at the end (eg my.file.x264.aac-MyGroup.mkv)
     x264.AAC-, x264.AC3-, x264-, h264-, h264.AAC-, h264.AC3-, x264.EAC3-, h264.EAC3-, XviD.MP3- 
     
