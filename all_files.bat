@@ -36,7 +36,7 @@ goto :EOF
 
 :x264_ac3
 
-set end=BallzTV.mkv
+set end=ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.AC3-=%
 call set output=%%output:!endbit!=!end!%%
@@ -51,7 +51,7 @@ goto :EOF
 
 :x264_aac
 
-set end=BallzTV.mkv
+set end=ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.AAC-=%
 call set output=%%output:!endbit!=!end!%%
@@ -67,7 +67,7 @@ goto :EOF
 
 :x264_noaudio
 
-set end=BallzTV.mkv
+set end=ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC-=%
 call set output=%%output:!endbit!=!end!%%
@@ -83,7 +83,7 @@ goto :EOF
 
 :x264_eac3
 
-set end=BallzTV.mkv
+set end=ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.EAC3-=%
 call set output=%%output:!endbit!=!end!%%
@@ -99,7 +99,7 @@ goto :EOF
 
 :h264_ac3
 
-set end=BallzTV.mkv
+set end=ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.AC3-=%
 call set output=%%output:!endbit!=!end!%%
@@ -115,7 +115,7 @@ goto :EOF
 
 :h264_aac
 
-set end=BallzTV.mkv
+set end=ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.AAC-=%
 call set output=%%output:!endbit!=!end!%%
@@ -131,7 +131,7 @@ goto :EOF
 
 :h264_eac3
 
-set end=BallzTV.mkv
+set end=ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.EAC3-=%
 call set output=%%output:!endbit!=!end!%%
@@ -147,7 +147,7 @@ goto :EOF
 
 :xvid_mp3
 
-set end=BallzTV.mkv
+set end=ReEncodedByBallzTV.mkv
 set output=%input:XviD.MP3=HEVC.AAC%
 set endbit=%output:*HEVC.AAC-=%
 call set output=%%output:!endbit!=!end!%%
@@ -163,7 +163,7 @@ goto :EOF
 
 :x264_ac3_ng
 
-set end=-BallzTV.mkv
+set end=-ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.AC3=%
 call set output=%%output:!endbit!=!end!%%
@@ -178,7 +178,7 @@ goto :EOF
 
 :x264_aac_ng
 
-set end=-BallzTV.mkv
+set end=-ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.AAC=%
 call set output=%%output:!endbit!=!end!%%
@@ -194,7 +194,7 @@ goto :EOF
 
 :x264_noaudio_ng
 
-set end=-BallzTV.mkv
+set end=-ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC=%
 call set output=%%output:!endbit!=!end!%%
@@ -210,7 +210,7 @@ goto :EOF
 
 :x264_eac3_ng
 
-set end=-BallzTV.mkv
+set end=-ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.EAC3=%
 call set output=%%output:!endbit!=!end!%%
@@ -226,7 +226,7 @@ goto :EOF
 
 :h264_ac3_ng
 
-set end=-BallzTV.mkv
+set end=-ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.AC3=%
 call set output=%%output:!endbit!=!end!%%
@@ -242,7 +242,7 @@ goto :EOF
 
 :h264_aac_ng
 
-set end=-BallzTV.mkv
+set end=-ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.AAC=%
 call set output=%%output:!endbit!=!end!%%
@@ -258,7 +258,7 @@ goto :EOF
 
 :h264_eac3_ng
 
-set end=-BallzTV.mkv
+set end=-ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.EAC3=%
 call set output=%%output:!endbit!=!end!%%
@@ -274,7 +274,7 @@ goto :EOF
 
 :xvid_mp3_ng
 
-set end=-BallzTV.mkv
+set end=-ReEncodedByBallzTV.mkv
 set output=%input:XviD.MP3=HEVC.AAC%
 set endbit=%output:*HEVC.AAC=%
 call set output=%%output:!endbit!=!end!%%
