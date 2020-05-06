@@ -25,6 +25,8 @@ If you have filenames with spaces in them use my no_spaces.bat script first
     
 4. If found it will replace the video string with HEVC and proceed to convert the file.
 5. If the audio detected was mp3, it will encode to AAC. Otherwise audio is stream copied.
+6. You can run the script multiple times in the same folder. If destination file exists it skips.
+
 
 
 
