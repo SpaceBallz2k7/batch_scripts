@@ -16,10 +16,13 @@ If you have filenames with spaces in them use my no_spaces.bat script first
 3. If any files are found it will look for the following :-
 
     Files with group names at the end (eg my.file.x264.aac-MyGroup.mkv)
+    
     x264.AAC-, x264.AC3-, x264-, h264-, h264.AAC-, h264.AC3-, x264.EAC3-, h264.EAC3-, XviD.MP3- 
     
     Files without group names at the end (eg my.file.x264.aac.mkv)
+    
     x264.AAC., x264.AC3., x264., h264., h264.AAC., h264.AC3., x264.EAC3., h264.EAC3., XviD.MP3.
+    
 4. If found it will replace the video string with HEVC and proceed to convert the file.
 5. If the audio detected was mp3, it will encode to AAC. Otherwise audio is stream copied.
 
