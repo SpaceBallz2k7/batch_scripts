@@ -9,6 +9,7 @@ rem Begin String Detection
 setlocal enableextensions enabledelayedexpansion
 set input=%~1
 set str1=%~nx1
+set qual=18
 
 rem Filenames with groups
 if not x%str1:x264.ac3-=%==x%str1% goto :x264_ac3
@@ -40,7 +41,7 @@ set end=ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.AC3-=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -55,7 +56,7 @@ set end=ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.AAC-=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -71,7 +72,7 @@ set end=ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC-=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -87,7 +88,7 @@ set end=ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.EAC3-=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -103,7 +104,7 @@ set end=ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.AC3-=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -119,7 +120,7 @@ set end=ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.AAC-=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -135,7 +136,7 @@ set end=ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.EAC3-=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -151,7 +152,7 @@ set end=ReEncodedByBallzTV.mkv
 set output=%input:XviD.MP3=HEVC.AAC%
 set endbit=%output:*HEVC.AAC-=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a aac -b:a 128k -c:s copy "%output%"
@@ -167,7 +168,7 @@ set end=-ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.AC3=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -182,7 +183,7 @@ set end=-ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.AAC=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -198,7 +199,7 @@ set end=-ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -214,7 +215,7 @@ set end=-ReEncodedByBallzTV.mkv
 set output=%input:x264=HEVC%
 set endbit=%output:*HEVC.EAC3=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -230,7 +231,7 @@ set end=-ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.AC3=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -246,7 +247,7 @@ set end=-ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.AAC=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -262,7 +263,7 @@ set end=-ReEncodedByBallzTV.mkv
 set output=%input:h264=HEVC%
 set endbit=%output:*HEVC.EAC3=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a copy -c:s copy "%output%"
@@ -278,7 +279,7 @@ set end=-ReEncodedByBallzTV.mkv
 set output=%input:XviD.MP3=HEVC.AAC%
 set endbit=%output:*HEVC.AAC=%
 call set output=%%output:!endbit!=!end!%%
-set qual=18
+
 title "Current File - %output%"
 IF NOT EXIST "%output%" (
 ffmpeg -i "%input%" -metadata title="%output%" -c:v hevc_nvenc -rc constqp -cq %qual% -rc-lookahead 32 -g 600 -c:a aac -b:a 128k -c:s copy "%output%"
